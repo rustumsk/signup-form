@@ -82,7 +82,7 @@ h1{
     font-weight: bolder;
     text-align: center;
     margin-top: 80px;
-    text-shadow: 0 0 20px 10px black;
+    text-shadow: 0 0 50px black;
 }
 .fContent{
     text-align: center;
@@ -92,7 +92,7 @@ h1{
     font-family: space;
     padding-bottom: 10px;
 }
-span{
+.fContent > span{
     color: black;
     font-weight: bolder;
 }
@@ -113,6 +113,15 @@ fieldset{
 }
 fieldset>div{
     padding: 10px;
+}
+fieldset>div>span::before{
+    font-weight: bolder;
+}
+fieldset>div>span{
+    position: relative;
+    bottom: 21px;
+    left: 5px;
+    color: red;
 }
 label,input{
     display: block;
@@ -162,7 +171,10 @@ input:invalid{
     top: 50px;
     left: 50px;
 }
-.bottom>button:hover{
+:disabled{
+    opacity: .5;
+}
+.bottom>button:hover:enabled{
     box-shadow: 0 0 20px 10px #200589;
 }
 .account{
